@@ -1,4 +1,4 @@
-name: Deploy Next.js App to Main
+name: Playground
 
 on:
   workflow_dispatch:
@@ -7,10 +7,10 @@ jobs:
   playground:
     runs-on: ubuntu-latest
   
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Test
-      run: |
-        echo "Hello world"
+      - name: Test
+        run: |
+          echo "Hello world"
