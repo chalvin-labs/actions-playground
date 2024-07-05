@@ -13,4 +13,4 @@ jobs:
 
       - name: Test
         run: |
-          echo "Hello world"
+          echo "Hello world from main"
