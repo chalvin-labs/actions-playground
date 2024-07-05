@@ -6,6 +6,7 @@ on:
 jobs:
   playground:
     runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
   
     steps:
       - name: Checkout code
