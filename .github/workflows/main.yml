@@ -1,4 +1,4 @@
-name: Playground
+name: Playground main
 
 on:
   workflow_dispatch:
@@ -6,6 +6,7 @@ on:
 jobs:
   playground:
     runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
   
     steps:
       - name: Checkout code
@@ -13,4 +14,4 @@ jobs:
 
       - name: Test
         run: |
-          echo "Hello world"
+          echo "Hello world from main"
