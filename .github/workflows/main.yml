@@ -8,7 +8,12 @@ jobs:
     runs-on: ubuntu-latest
   
     steps:
-
+      - name: Check branch
+        run: |
+          if [ "${{ github.ref }}" != "refs/heads/main" ]; then
+            echo "This workflow can only be manually triggered on the main branch."
+            exit 1
+          fi
 
       - name: Checkout code
         uses: actions/checkout@v4
